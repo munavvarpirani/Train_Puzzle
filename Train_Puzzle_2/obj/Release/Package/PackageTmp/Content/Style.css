@@ -1,0 +1,232 @@
+﻿body {
+    margin: 0;
+    background-color: #252021;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.canvas-container {
+    position: relative;
+    width: 100vmin;
+    height: 100vmin;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+    .canvas-container a {
+        display: none;
+        position: absolute;
+        right: 5%;
+        top: 5%;
+    }
+
+    .canvas-container canvas {
+        height: 100%;
+    }
+
+.modal {
+    position: absolute;
+    width: 100px;
+    height: 183px;
+    font-size: 19px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/ticket.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #019897;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    font-family: 'Coustard', serif;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    padding: 60px;
+    transition: .2s all;
+}
+
+.nextbtn {
+    background-color: #d8d1c6;
+    cursor:pointer;
+}
+
+    @media screen and (max-width: 1000px) {
+        .modal {
+            position: absolute;
+            width: 235px;
+            height: 350px;
+            font-size: 36px;
+            padding: 183px;
+            margin-left: 46px;
+        }
+
+        .btn {
+            width: 220px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 50px;
+            margin-top: 40px;
+            margin-right: 6%;
+        }
+
+        .playbtn {
+            width: 203px;
+            font-size: 69px;
+            height: 74px;
+            margin-top: 114px;
+            padding: 24px;
+            background-color: #d8d1c6;
+            margin-left: -47px;
+        }
+
+        .nextbtn {
+            margin-top: 52px;
+            font-size: 64px;
+            background-color: #d8d1c6;
+            padding: 30px;
+        }
+
+        .trybtn {
+            background-color: #d8d1c6;
+            font-size: 43px;
+            padding: 25px;
+            margin-top: 87px;
+            margin-left: -66px;
+            cursor: pointer;
+        }
+
+        .modal__title {
+            margin-top: 20px;
+            font-size: 60px;
+        }
+    }
+
+    .trybtn {
+    background-color: #d8d1c6;
+    cursor:pointer;
+}
+.playbtn {
+    background-color: #d8d1c6;
+    cursor:pointer;
+}
+
+
+.modal__gameover,
+.modal__win {
+    display: none;
+}
+
+    .modal__gameover .modal__title,
+    .modal__win .modal__title {
+        padding: 40px 0 25px;
+        margin-right: 83px;
+        margin-top: -52px;
+    }
+
+.modal__loading {
+    display: none;
+}
+
+.game--active .canvas-container a {
+    display: block;
+}
+
+.game--active .modal {
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+
+.game--over .modal__gameover {
+    display: block;
+}
+
+.game--over .modal__main,
+.game--over .modal__win {
+    display: none;
+}
+
+.game--win .modal__win {
+    display: block;
+}
+
+.game--win .modal__gameover,
+.game--win .modal__main {
+    display: none;
+}
+
+.game--loading .modal__main {
+    display: none;
+}
+
+.game--loading .modal__loading {
+    display: block;
+}
+
+.modal__title {
+    padding: 10px 0 17px;
+    margin: 0;
+    color: #f38073;
+    line-height: 1.1;
+    font-weight: normal;
+}
+
+.modal__text {
+    margin: 2.5em 0;
+}
+
+.modal__controls {
+    display: flex;
+    justify-content: center;
+    margin: 17px 0 10px;
+}
+
+.btn {
+    font-family: 'Coustard', serif;
+    display: inline-block;
+    line-height: 40px;
+    background-color: #d8d1c6;
+    padding: 0 20px;
+    color: #252021;
+    cursor: pointer;
+    text-transform: none;
+}
+
+    .btn:hover {
+        background-color: #c3b9a8;
+    }
+
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: transparent;
+}
+
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 129px;
+        height: 6px;
+        background-color: #01aead;
+        border: none;
+        border-radius: 3px;
+    }
+
+    input[type=range]::-ms-track {
+        width: 129px;
+        height: 6px;
+        background-color: #01aead;
+        border: none;
+        border-radius: 3px;
+        margin: 5px 0;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: #f38073;
+        margin-top: -5px;
+    }

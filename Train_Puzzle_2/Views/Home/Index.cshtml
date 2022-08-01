@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body class="game game--loading">
+    <div class="canvas-container">
+        <a class="btn" onclick="finish()">Finished</a>
+        <canvas width="1380" height="1380"></canvas>
+        <script src="~/Scripts/App.js"></script>
+    </div>
+    <div class="modal">
+        <div class="modal__content modal__main">
+            <h2 class="modal__title">Train Puzzle</h2>
+            @*<label>
+                    Difficulty
+                    <input type="range" min="1" max="100" value="25" oninput="setSpeed(this)" />
+                </label>*@
+            <div class="modal__controls"><a class="playbtn" onclick="playLevel(false, false)">Play</a></div>
+        </div>
+        <div class="modal__content modal__win">
+            <h2 class="modal__title">Well done!</h2>
+            <div class="modal__controls" id="btn1"><a class="nextbtn" onclick="NextLevel(false, false)">Next</a></div>
+            <div class="modal__controls" id="btn2"><a class="nextbtn" onclick="NextLevel2(false, false)">Next</a></div>
+            <div class="modal__controls" id="btn3"><a class="nextbtn" onclick="NextLevel3(false, false)">Next</a></div>
+            <div class="modal__controls" id="btn4"><a class="nextbtn" onclick="NextLevel4(false, false)">Next</a></div>
+            <div class="modal__controls" id="btn5"><a class="nextbtn" onclick="NextLevel5(false, false)">Next</a></div>
+            <div class="modal__controls" id="btn6"><a class="nextbtn" onclick="NextLevel6(false, false)">Next</a></div>
+            <div class="modal__controls" id="btn7"><a class="nextbtn" onclick="NextLevel7(false, false)">Next</a></div>
+            <div class="modal__controls" id="btn8"><a class="nextbtn" onclick="NextLevel8(false, false)">Next</a></div>
+            <div class="modal__controls" id="btn9"><a class="nextbtn" onclick="NextLevel9(false, false)">Next</a></div>
+            <div class="modal__controls" id="btn11"><a class="btn" onclick="ReStart()">You Won The Train Puzzle !!</a></div>
+        </div>
+        <div class="modal__content modal__loading">
+            <h2 class="modal__title">Train Puzzle</h2>
+            <div class="modal__text">Loading...</div>
+        </div>
+        <div class="modal__content modal__gameover">
+            <h2 class="modal__title">Game Over</h2>
+            <div class="modal__controls"><a class="trybtn" onclick="gotoMenu()">Try again</a></div>
+        </div>
+
+    </div>
+</body>
+</html>
